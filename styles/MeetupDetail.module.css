@@ -1,0 +1,43 @@
+.MeetupDetail_main {
+    margin-top     : 20px;
+    display        : flex;
+    justify-content: center;
+    width          : 100vw;
+}
+
+.MeetupDetail_content {
+    width         : 90vw;
+    height        : 100vh;
+    box-shadow    : 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius : 6px;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+}
+
+.MeetupDetail_name {
+    text-align: center;
+    font-size : 2rem;
+
+}
+
+.MeetupDetail_desc {
+    text-align: center;
+
+}
+
+.MeetupDetail_img {
+    width        : 100%;
+    height       : 60%;
+    border-radius: 6px;
+    position     : relative;
+    overflow     : hidden;
+}
+
+.MeetupDetail_img>img {
+    overflow  : hidden;
+    width     : 100%;
+    height    : 100%;
+    object-fit: cover;
+    position  : absolute;
+}
