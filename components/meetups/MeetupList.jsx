@@ -1,6 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import MeetupItem from './MeetupItem';
-import classes from './MeetupList.module.css';
+import classes from '../../styles/MeetupList.module.css';
 
 function MeetupList(props) {
   return (

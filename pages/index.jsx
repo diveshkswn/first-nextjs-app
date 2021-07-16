@@ -1,6 +1,5 @@
 // index page : /
 import MeetupList from '../components/meetups/MeetupList';
-import Layout from '../components/layout/Layout';
 
 const DUMMY_LIST = [
   {
@@ -18,10 +17,21 @@ const DUMMY_LIST = [
     address: 'Kepleer 22b',
   },
 ];
-export default function HomePage() {
+export default function HomePage(props) {
+  const { meetups } = props;
+
   return (
 
-    <MeetupList meetups={DUMMY_LIST} />
+    <MeetupList meetups={meetups} />
 
   );
+}
+
+export async function getStaticProps() {
+  const data = DUMMY_LIST;
+
+  return {
+    props: { meetups: data },
+    revalidate: 10, // Regenerate static props every 10 seconds
+  };
 }
