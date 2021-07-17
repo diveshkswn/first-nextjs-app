@@ -4,7 +4,7 @@ import classes from '../../styles/MeetupList.module.css';
 
 function MeetupList(props) {
   return (
-    <ul className={classes.list}>
+    <div className={classes.list}>
       {props.meetups.map((meetup) => (
         <MeetupItem
           key={meetup.id}
@@ -14,7 +14,7 @@ function MeetupList(props) {
           address={meetup.address}
         />
       ))}
-    </ul>
+    </div>
   );
 }
 

@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 /* eslint-disable max-len */
+import Image from 'next/image';
 import styles from '../../styles/MeetupDetail.module.css';
 
 export default function MeetupDetail(props) {
@@ -9,7 +9,7 @@ export default function MeetupDetail(props) {
     <div className={styles.MeetupDetail_main}>
       <div className={styles.MeetupDetail_content}>
         <div className={styles.MeetupDetail_img}>
-          <img src={meetupDetailProps.image} alt="detail_img" />
+          <Image objectFit="cover" src={meetupDetailProps.image} alt="detail_img" layout="fill" quality="100" />
         </div>
         <div className={styles.MeetupDetail_name}>
           <h3>{meetupDetailProps.title}</h3>
@@ -20,6 +20,7 @@ export default function MeetupDetail(props) {
           </span>
         </div>
       </div>
+
     </div>
   );
 }
