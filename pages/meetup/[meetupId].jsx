@@ -65,7 +65,8 @@ export async function getStaticPaths() {
   return {
     paths: [
       { params: { meetupId: '1' } },
-      { params: { meetupId: '12' } },
+      { params: { meetupId: '7' } },
+      { params: { meetupId: '10' } },
     ],
     fallback: 'blocking', // Blocking fallback will generate getStaticProps for the params at runtime
     // https://nextjs.org/docs/basic-features/data-fetching#fallback-blocking
