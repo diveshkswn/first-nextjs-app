@@ -1,15 +1,20 @@
 /* eslint-disable max-len */
 // index page : /
+import Head from 'next/head';
 import MeetupList from '../components/meetups/MeetupList';
 import { getAllMeetups } from './api/allMeetups';
-// 2:47
+
 export default function HomePage(props) {
   const { meetups } = props;
 
   return (
-
-    <MeetupList meetups={meetups} />
-
+    <>
+      <Head>
+        <title>Meetup Next App</title>
+        <meta name="description" content="Meetup Next App" />
+      </Head>
+      <MeetupList meetups={meetups} />
+    </>
   );
 }
 

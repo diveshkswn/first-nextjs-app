@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable react/destructuring-assignment */
 // /meetup/[1]
+import Head from 'next/head';
 import { getMeetupById } from '../api/meetup/[meetupID]';
 import MeetupDetail from '../../components/meetups/MeetupDetail';
 
@@ -9,6 +10,9 @@ export default function MeetupId(props) {
 
   return (
     <>
+      <Head>
+        <title>{meetupDetailProps.title}</title>
+      </Head>
       {/* <h1>Meetup id page</h1>
       <h3>{router.query.meetupId}</h3> */}
 
